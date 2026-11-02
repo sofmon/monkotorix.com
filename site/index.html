@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Monkotorix — Different Minds. Endless Possibilities.</title>
-  <meta name="description" content="Free games and playful activities for children — movement, puzzles, numbers, letters and words — made by parents with neurodivergent kids in mind.">
+  <meta name="description" content="Small games with movement, puzzles, letters and numbers, made by parents for their own neurodivergent children and shared with other families.">
   <link rel="canonical" href="https://monkotorix.com/">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -16,8 +16,9 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Monkotorix">
+  <meta property="og:locale" content="en_GB">
   <meta property="og:title" content="Monkotorix — Different Minds. Endless Possibilities.">
-  <meta property="og:description" content="Games and playful activities for children, made by parents with neurodivergent kids in mind. Two games now in open beta.">
+  <meta property="og:description" content="Small games made by parents for their own neurodivergent children. Two games to play now, in beta.">
   <meta property="og:url" content="https://monkotorix.com/">
   <meta property="og:image" content="https://monkotorix.com/assets/og.jpg">
   <meta property="og:image:width" content="1200">
@@ -41,7 +42,7 @@
       --text:#1b2436; --muted:#5a5243; --line:rgba(27,36,54,.14); --line-strong:rgba(27,36,54,.26);
       --accent:#e07b38; --accent-hi:#ef9a4c; --accent-ink:#14213a; --accent-text:#9a4a17;
       --link:#1b5a62; --focus:#1b5a62;
-      --band:#14213a; --band-2:#1d2d4f; --band-text:#f2ecdb; --band-muted:#c3bba7; --band-accent:#f2b85e;
+      --band:#14213a; --band-text:#f2ecdb; --band-muted:#c3bba7; --band-accent:#f2b85e;
       --shadow:0 1px 2px rgba(20,33,58,.06),0 6px 18px rgba(20,33,58,.07);
       --shadow-lg:0 22px 50px rgba(20,33,58,.20),0 2px 6px rgba(20,33,58,.08);
       --a1:#e07b38; --a2:#2d8a8a; --a3:#7a68b3; --a4:#d49a26; --a5:#cf5f78; --a6:#5f9150;
@@ -62,7 +63,7 @@
       --text:#f1e5c8; --muted:#b3bacd; --line:rgba(217,164,95,.22); --line-strong:rgba(241,229,200,.32);
       --accent:#e8b46f; --accent-hi:#f2c88b; --accent-ink:#231607; --accent-text:#e2b06e;
       --link:#eec584; --focus:#eec584;
-      --band:#070b18; --band-2:#0f1530; --band-text:#f1e5c8; --band-muted:#b3bacd; --band-accent:#eec584;
+      --band:#070b18; --band-text:#f1e5c8; --band-muted:#b3bacd; --band-accent:#eec584;
       --shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.3);
       --shadow-lg:0 22px 50px rgba(0,0,0,.55),0 0 40px rgba(61,142,160,.10);
       --a1:#ef9a4c; --a2:#4fb3ad; --a3:#a596e0; --a4:#f2b85e; --a5:#ec8aa2; --a6:#8fc27a;
@@ -79,7 +80,7 @@
       --text:#f1e5c8; --muted:#b3bacd; --line:rgba(217,164,95,.22); --line-strong:rgba(241,229,200,.32);
       --accent:#e8b46f; --accent-hi:#f2c88b; --accent-ink:#231607; --accent-text:#e2b06e;
       --link:#eec584; --focus:#eec584;
-      --band:#070b18; --band-2:#0f1530; --band-text:#f1e5c8; --band-muted:#b3bacd; --band-accent:#eec584;
+      --band:#070b18; --band-text:#f1e5c8; --band-muted:#b3bacd; --band-accent:#eec584;
       --shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.3);
       --shadow-lg:0 22px 50px rgba(0,0,0,.55),0 0 40px rgba(61,142,160,.10);
       --a1:#ef9a4c; --a2:#4fb3ad; --a3:#a596e0; --a4:#f2b85e; --a5:#ec8aa2; --a6:#8fc27a;
@@ -107,7 +108,6 @@
     a:hover{text-decoration-thickness:2px}
     :focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
     .nowrap{white-space:nowrap}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
     .skip{position:absolute;left:1rem;top:-4rem;z-index:50;background:var(--surface);color:var(--text);padding:.7rem 1.1rem;border-radius:.6rem;box-shadow:var(--shadow);font-weight:600}
     .skip:focus{top:1rem}
     .icon{width:1.5rem;height:1.5rem;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
@@ -123,16 +123,13 @@
     }
     .rule::before,.rule::after{content:"";height:1px;flex:1;max-width:7rem;background:linear-gradient(to var(--dir,right),transparent,currentColor);opacity:.55}
     .rule::after{--dir:left}
-    @media (max-width:30rem){.rule:not(.left)::before,.rule:not(.left)::after{display:none}}
-    .rule.left{justify-content:flex-start;text-indent:0}
-    .rule.left::before{display:none}
+    @media (max-width:30rem){.rule::before,.rule::after{display:none}}
     @media (max-width:24rem){.rule{letter-spacing:.18em;text-indent:.18em;gap:.7rem}}
     .title{
       font-family:var(--font-display);font-variation-settings:"SOFT" 100;font-weight:600;
       font-size:clamp(1.9rem,4.4vw,2.9rem);line-height:1.12;letter-spacing:-.01em;
       text-align:center;text-wrap:balance;max-width:24ch;margin:0 auto;overflow-wrap:break-word;
     }
-    .title-left{text-align:left;margin:0 0 1.5rem;max-width:20ch}
     .lead{color:var(--muted);font-size:clamp(1.05rem,1.6vw,1.2rem);max-width:60ch;margin:1.25rem auto 0;text-align:center;text-wrap:pretty}
     /* long centred paragraphs are hard to track on phones: left-align them there */
     @media (max-width:40rem){.lead,.contact-card p{text-align:left}}
@@ -260,30 +257,12 @@
     @media (max-width:40rem){.story-sub{text-align:left}}
     .flourish{margin-top:1.6rem;color:var(--accent-text);letter-spacing:.9em;text-indent:.9em;font-size:.8rem}
 
-    /* ── About ── */
-    .about-grid{display:grid;gap:clamp(2rem,5vw,4rem);align-items:center}
-    @media (min-width:56rem){.about-grid{grid-template-columns:1.15fr .85fr}}
-    .about-copy p{max-width:62ch}
-    .about-copy p + p{margin-top:1.1rem}
-    .about-copy .big{font-size:clamp(1.15rem,1.9vw,1.3rem);line-height:1.6;color:var(--text)}
-    .about-copy p:not(.big):not(.rule){color:var(--muted)}
-    .chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.6rem}
-    .chip{display:inline-flex;align-items:center;padding:.35rem .85rem;border-radius:999px;font-size:.88rem;font-weight:500;background:var(--surface);border:1px solid var(--line);color:var(--text)}
-    .about-card{
-      position:relative;border-radius:var(--r-lg);padding:clamp(2rem,4vw,2.75rem);text-align:center;overflow:hidden;
-      background:linear-gradient(160deg,var(--surface),var(--surface-2));border:1px solid var(--line);box-shadow:var(--shadow);
-    }
-    .about-card svg.loop{width:min(15rem,70%);height:auto;margin:0 auto 1.4rem}
-    .about-card blockquote{font-family:var(--font-display);font-variation-settings:"SOFT" 100;font-weight:500;font-size:clamp(1.3rem,2.4vw,1.6rem);line-height:1.35;text-wrap:balance}
-    .loop-a{stroke:var(--a2)} .loop-b{stroke:var(--a1)}
-    .loop-dot{fill:var(--stop-ring);stroke-width:3}
-
-    /* ── Mission ── */
-    .mission-statement{
+    /* ── Our goal ── */
+    .goal-statement{
       font-family:var(--font-display);font-variation-settings:"SOFT" 100;font-weight:550;
       font-size:clamp(1.8rem,4.2vw,2.8rem);line-height:1.18;text-align:center;max-width:26ch;margin:0 auto;text-wrap:balance;
     }
-    .mission-statement em{font-style:normal;color:var(--accent-text)}
+    .goal-statement em{font-style:normal;color:var(--accent-text)}
     .bridge{display:grid;gap:2.5rem;align-items:center;margin-top:clamp(2.5rem,6vw,4rem)}
     @media (min-width:56rem){.bridge{grid-template-columns:1fr 1fr}}
     .venn{position:relative;width:min(100%,27rem);aspect-ratio:1/0.94;margin:0 auto;container-type:inline-size}
@@ -304,43 +283,11 @@
     .bridge-copy p{color:var(--muted);max-width:52ch}
     .bridge-copy p + p{margin-top:1rem}
     .bridge-copy .big{color:var(--text);font-size:clamp(1.1rem,1.8vw,1.25rem);line-height:1.6}
-    .disciplines{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin-top:1.6rem}
-    .discipline{display:flex;align-items:center;gap:.7rem;padding:.8rem .95rem;border-radius:var(--r-sm);background:var(--surface);border:1px solid var(--line);font-weight:600;font-size:.95rem;line-height:1.3}
-    .discipline .icon{color:var(--accent-text)}
-    @media (max-width:26rem){.disciplines{grid-template-columns:1fr}}
-    .goal{
-      margin:clamp(2.5rem,5vw,3.5rem) auto 0;max-width:46rem;text-align:center;padding:1.6rem 1.75rem;border-radius:var(--r-md);
-      border:1px dashed color-mix(in srgb,var(--accent-text) 55%,transparent);background:color-mix(in srgb,var(--accent) 7%,transparent)
-    }
-    .goal p{font-size:clamp(1.1rem,2vw,1.3rem);line-height:1.5}
-    .goal strong{font-family:var(--font-display);font-variation-settings:"SOFT" 100;font-weight:650;color:var(--accent-text)}
+    .cares{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin-top:1.4rem}
+    .care{display:flex;align-items:center;gap:.7rem;padding:.8rem .95rem;border-radius:var(--r-sm);background:var(--surface);border:1px solid var(--line);font-weight:600;font-size:.95rem;line-height:1.3;text-wrap:balance}
+    .care .icon{color:var(--accent-text)}
+    @media (max-width:26rem){.cares{grid-template-columns:1fr}}
 
-    /* ── Six areas ── */
-    .areas{display:grid;gap:1.1rem;counter-reset:area}
-    @media (min-width:40rem){.areas{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (min-width:64rem){.areas{grid-template-columns:repeat(3,minmax(0,1fr))}}
-    .area{
-      position:relative;display:flex;flex-direction:column;padding:1.6rem 1.5rem 1.4rem;border-radius:var(--r-md);
-      background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden;
-    }
-    .area::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--ac)}
-    .area-top{display:flex;align-items:center;gap:.85rem;margin-bottom:1rem}
-    .area-icon{
-      width:3rem;height:3rem;border-radius:var(--r-sm);display:grid;place-items:center;flex:none;
-      background:color-mix(in srgb,var(--ac) 16%,transparent);color:var(--text);border:1.5px solid color-mix(in srgb,var(--ac) 55%,transparent)
-    }
-    .area-num{font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-    .area h3{font-family:var(--font-display);font-variation-settings:"SOFT" 100;font-weight:600;font-size:1.3rem;line-height:1.22;margin-bottom:.6rem}
-    .area p{color:var(--muted);font-size:.97rem;line-height:1.65}
-    .area-games{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;margin-top:auto;padding-top:1.1rem}
-    .area-games .lbl{flex-basis:100%;margin:0 0 .1rem;font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-    .tag{display:inline-flex;align-items:center;gap:.35rem;padding:.22rem .65rem;border-radius:999px;font-size:.82rem;font-weight:500;background:var(--surface-2);border:1px solid var(--line);color:var(--text);text-decoration:none;white-space:nowrap}
-    /* links are buttons, not labels (as on sofmon.com) */
-    a.tag{min-height:2rem;padding-inline:.8rem;background:transparent;border-color:var(--accent-text);color:var(--accent-text);font-weight:600;transition:background-color .15s ease,color .15s ease}
-    a.tag:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-    a.tag .icon{width:.85rem;height:.85rem;stroke-width:2.4}
-    .tag.soon{border-style:dashed;color:var(--muted);background:transparent}
-    .a1{--ac:var(--a1)} .a2{--ac:var(--a2)} .a3{--ac:var(--a3)} .a4{--ac:var(--a4)} .a5{--ac:var(--a5)} .a6{--ac:var(--a6)}
 
     /* ── Games ── */
     .game-panel{
@@ -366,9 +313,7 @@
     .game-points{margin:1.25rem 0 1.6rem;display:grid;gap:.45rem}
     .game-points li{position:relative;padding-left:1.4rem;font-size:.97rem}
     .game-points li::before{content:"✦";content:"✦" / "";position:absolute;left:0;top:.2em;color:var(--accent-text);font-size:.75rem;line-height:1.6}
-    .game-meta{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.1rem}
     .game-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.1rem}
-    .game-actions .more{font-size:.92rem}
     .game-shot{
       width:min(15.5rem,68vw);border-radius:1.7rem;overflow:hidden;background:var(--surface);
       border:6px solid color-mix(in srgb,var(--text) 88%,transparent);box-shadow:var(--shadow-lg);
@@ -378,94 +323,15 @@
       display:grid;gap:1rem;align-items:center;margin-top:1.5rem;padding:1.4rem 1.6rem;border-radius:var(--r-md);
       background:color-mix(in srgb,var(--a2) 9%,var(--surface));border:1px solid color-mix(in srgb,var(--a2) 35%,transparent);
     }
-    @media (min-width:48rem){.beta-note{grid-template-columns:auto 1fr auto}}
+    @media (min-width:48rem){.beta-note{grid-template-columns:auto 1fr}}
     .beta-note .icon{width:2rem;height:2rem;color:var(--a2)}
     .beta-note h3{font-size:1.02rem;font-weight:600;margin-bottom:.2rem}
-    .beta-note p{color:var(--muted);font-size:.95rem;max-width:56ch}
+    .beta-note p{color:var(--muted);font-size:.95rem;max-width:68ch}
 
-    /* ── Different minds ── */
-    .minds-quote{
-      max-width:44rem;margin:0 auto clamp(2.5rem,5vw,3.5rem);text-align:center;
-      font-family:var(--font-display);font-variation-settings:"SOFT" 100;font-weight:450;
-      font-size:clamp(1.35rem,2.8vw,1.85rem);line-height:1.4;text-wrap:balance
-    }
-    .principles{display:grid;gap:1rem}
-    @media (min-width:40rem){.principles{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (min-width:64rem){.principles{grid-template-columns:repeat(3,minmax(0,1fr))}}
-    .principle{display:flex;gap:1rem;padding:1.3rem 1.35rem;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line)}
-    .principle .icon{width:1.7rem;height:1.7rem;color:var(--accent-text);margin-top:.15rem}
-    .principle h3{font-size:1.02rem;font-weight:600;line-height:1.35;margin-bottom:.25rem}
-    .principle p{color:var(--muted);font-size:.95rem;line-height:1.6}
-    .principles-note{margin-top:1.25rem;text-align:center;color:var(--muted);font-size:.9rem}
-
-    /* ── Progress ── */
-    .audiences{display:grid;gap:1rem}
-    @media (min-width:48rem){.audiences{grid-template-columns:repeat(3,minmax(0,1fr))}}
-    .audience{padding:1.9rem 1.5rem;border-radius:var(--r-md);background:linear-gradient(to bottom,var(--surface),var(--surface-2));border:1px solid var(--line);text-align:center}
-    .audience h3{font-family:var(--font-display);font-variation-settings:"SOFT" 100;font-weight:600;font-size:1.3rem;line-height:1.25;margin-bottom:.35rem}
-    .audience .where{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text);margin-bottom:.7rem}
-    .audience p{color:var(--muted);font-size:.97rem}
-    .roadmap{
-      display:grid;gap:1.5rem;margin-top:1.5rem;padding:clamp(1.6rem,4vw,2.4rem);border-radius:var(--r-lg);
-      background:var(--band);color:var(--band-text);
-    }
-    @media (min-width:56rem){.roadmap{grid-template-columns:1fr 1.25fr;align-items:center}}
-    .roadmap .rule{color:var(--band-accent);margin-bottom:.6rem}
-    .roadmap h3{font-family:var(--font-display);font-variation-settings:"SOFT" 100;font-weight:600;font-size:clamp(1.4rem,2.6vw,1.8rem);line-height:1.2}
-    .roadmap p{color:var(--band-muted);margin-top:.7rem;font-size:.97rem}
-    .roadmap ol{display:grid;gap:.7rem;list-style:none;padding:0;counter-reset:rm}
-    .roadmap li{display:flex;gap:.9rem;align-items:flex-start;padding:1rem 1.1rem;border-radius:var(--r-sm);background:rgba(241,229,200,.06);border:1px solid rgba(241,229,200,.14)}
-    .roadmap li::before{counter-increment:rm;content:counter(rm);flex:none;width:1.8rem;height:1.8rem;border-radius:50%;display:grid;place-items:center;font-size:.85rem;font-weight:600;color:#231607;background:var(--band-accent)}
-    .roadmap li b{display:block;font-weight:600;color:var(--band-text)}
-    .roadmap li span{color:var(--band-muted);font-size:.93rem}
-    .roadmap li em{display:inline-block;margin-top:.35rem;font-style:normal;font-size:.8rem;font-weight:600;color:var(--band-accent)}
-    .values{margin-top:clamp(2.5rem,5vw,3.5rem);text-align:center}
-    .values p{color:var(--muted);text-wrap:balance}
-    .values ul{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-top:1rem}
-    .values li{padding:.5rem 1.1rem;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-family:var(--font-display);font-variation-settings:"SOFT" 100;font-weight:550;font-size:1.08rem}
-    .values li:last-child{background:color-mix(in srgb,var(--accent) 16%,var(--surface));border-color:color-mix(in srgb,var(--accent) 40%,transparent)}
-
-    /* ── Vision band ── */
-    .vision{
-      color:var(--band-text);text-align:center;overflow:hidden;
-      background:
-        radial-gradient(70% 90% at 50% 120%,rgba(224,123,56,.30),transparent 62%),
-        radial-gradient(60% 60% at 50% -10%,rgba(63,163,159,.16),transparent 60%),
-        linear-gradient(180deg,var(--band) 0%,var(--band-2) 100%);
-    }
-    .vision::before{
-      content:"";position:absolute;inset:0;pointer-events:none;opacity:.7;
-      background-image:
-        radial-gradient(1px 1px at 12% 18%,rgba(241,229,200,.7) 50%,transparent 51%),
-        radial-gradient(1px 1px at 78% 12%,rgba(241,229,200,.55) 50%,transparent 51%),
-        radial-gradient(1.5px 1.5px at 88% 46%,rgba(241,229,200,.45) 50%,transparent 51%),
-        radial-gradient(1px 1px at 30% 70%,rgba(241,229,200,.35) 50%,transparent 51%),
-        radial-gradient(1.5px 1.5px at 62% 30%,rgba(241,229,200,.4) 50%,transparent 51%),
-        radial-gradient(1px 1px at 6% 82%,rgba(241,229,200,.4) 50%,transparent 51%);
-      background-size:900px 600px;
-    }
-    .vision .wrap{position:relative}
-    .vision .rule{color:var(--band-accent)}
-    .vision blockquote{
-      font-family:var(--font-display);font-variation-settings:"SOFT" 100;font-weight:500;
-      font-size:clamp(1.75rem,4.4vw,3rem);line-height:1.2;max-width:24ch;margin:0 auto;text-wrap:balance
-    }
-    .vision .lead{color:var(--band-muted)}
-    .vision .closing{margin-top:2.2rem;font-family:var(--font-display);font-variation-settings:"SOFT" 100;font-style:italic;font-size:clamp(1.2rem,2.2vw,1.45rem);color:var(--band-accent);text-wrap:balance}
-
-    /* ── Privacy ── */
-    .safe{display:grid;gap:1rem}
-    @media (min-width:40rem){.safe{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (min-width:64rem){.safe{grid-template-columns:repeat(4,minmax(0,1fr))}}
-    .safe li{padding:1.4rem 1.3rem;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line);text-align:center}
-    .safe .icon{width:2rem;height:2rem;margin:0 auto .8rem;color:var(--a2)}
-    .safe b{display:block;font-weight:600;margin-bottom:.25rem}
-    .safe span{color:var(--muted);font-size:.93rem;line-height:1.55;display:block}
-    .privacy-link{text-align:center;margin-top:1.4rem}
-
-    /* ── Harbor & contact ── */
-    .harbor{text-align:center}
-    .harbor .lead a{font-weight:600}
+    /* ── Closing & contact ── */
+    .closing{text-align:center}
+    .closing-title{max-width:26ch}
+    .closing-title span{display:block}
     .contact-card{
       max-width:44rem;margin:clamp(2.5rem,5vw,3.25rem) auto 0;padding:clamp(1.75rem,4vw,2.5rem);border-radius:var(--r-lg);text-align:center;
       background:
@@ -484,15 +350,12 @@
     /* ── Footer ── */
     .site-footer{background:var(--band);color:var(--band-text);padding:3rem 1.5rem 2.5rem;text-align:center}
     .site-footer .brand{margin:0 auto;color:var(--band-text);font-size:1.45rem}
-    .site-footer .motto{margin-top:.9rem;font-family:var(--font-display);font-variation-settings:"SOFT" 100;font-style:italic;font-size:1.15rem;color:var(--band-text);text-wrap:balance}
-    .site-footer .ppd{margin-top:.35rem;color:var(--band-accent);letter-spacing:.32em;text-indent:.32em;font-size:.78rem;font-weight:600;text-transform:uppercase}
     .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:.3rem 1.3rem;margin-top:1.75rem;font-size:.92rem}
     .footer-links a{color:var(--band-text);text-decoration-color:rgba(241,229,200,.35)}
     .footer-links a:hover{color:var(--band-accent)}
     .footer-note{max-width:44rem;margin:1.6rem auto 0;color:var(--band-muted);font-size:.86rem;line-height:1.65;text-wrap:pretty}
     .legal{margin-top:1.4rem;color:var(--band-muted);font-size:.84rem;line-height:1.8}
     .site-footer :focus-visible{outline-color:var(--band-accent)}
-    .vision :focus-visible,.roadmap :focus-visible{outline-color:var(--band-accent)}
 
     @media print{
       .hero-land,.hero-sky,.theme-toggle,.nav-links{display:none}
@@ -516,29 +379,11 @@
       <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
       <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></symbol>
       <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></symbol>
-      <!-- six areas -->
-      <symbol id="i-motor" viewBox="0 0 24 24"><path d="M14.6 4.4a2 2 0 0 1 2.8 0l2.2 2.2a2 2 0 0 1 0 2.8L10 19l-5 1 1-5z"/><path d="m13 6 5 5"/><path d="M3 22h3" stroke-dasharray="1 2.4"/></symbol>
-      <symbol id="i-focus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".9" fill="currentColor"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3"/></symbol>
-      <symbol id="i-sensory" viewBox="0 0 24 24"><path d="M3 9.5c1.6-1.6 3.4-1.6 5 0s3.4 1.6 5 0 3.4-1.6 5 0 2.4 1.2 3 .6"/><path d="M3 14.5c1.6-1.6 3.4-1.6 5 0s3.4 1.6 5 0 3.4-1.6 5 0 2.4 1.2 3 .6"/><path d="M8 19.5c1.3.9 2.7.9 4 0s2.7-.9 4 0"/><path d="M8 4.5c1.3.9 2.7.9 4 0s2.7-.9 4 0"/></symbol>
-      <symbol id="i-think" viewBox="0 0 24 24"><circle cx="7.5" cy="7.5" r="3.8"/><rect x="13.2" y="3.7" width="7.3" height="7.3" rx="1.4"/><path d="M7.5 13.5 11.6 20.5H3.4z"/><path d="m14 17.2 2 2 4-4.2"/></symbol>
-      <symbol id="i-learn" viewBox="0 0 24 24"><path d="M3 5.6c3-1.3 6-1 9 1 3-2 6-2.3 9-1v13.2c-3-1.3-6-1-9 1-3-2-6-2.3-9-1z"/><path d="M12 6.6v13.2"/><path d="M6 10h3M6 13.2h3M15 10h3"/></symbol>
-      <symbol id="i-everyday" viewBox="0 0 24 24"><rect x="4" y="3.5" width="16" height="17.5" rx="2.6"/><path d="m7.8 9 1.6 1.6L12.2 8"/><path d="m7.8 15 1.6 1.6 2.8-2.6"/><path d="M14.6 9.6h2.6M14.6 15.6h2.6"/></symbol>
-      <!-- disciplines -->
-      <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 12.5V5.6a1.6 1.6 0 0 1 3.2 0V11"/><path d="M11.2 10V4.2a1.6 1.6 0 0 1 3.2 0V11"/><path d="M14.4 10.2V6a1.6 1.6 0 0 1 3.2 0v8a7 7 0 0 1-7 7h-.6a6.4 6.4 0 0 1-5.3-2.8L3 15.1a1.6 1.6 0 0 1 2.5-2l2.5 2.4"/></symbol>
-      <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9.2 18h5.6M10.2 21h3.6"/><path d="M12 3a6.2 6.2 0 0 0-3.8 11.1c.6.5 1 1.2 1 2V16h5.6v.1c0-.8.4-1.5 1-2A6.2 6.2 0 0 0 12 3z"/></symbol>
-      <symbol id="i-game" viewBox="0 0 24 24"><rect x="2.5" y="7" width="19" height="11" rx="5.5"/><path d="M7.3 10.6v3.8M5.4 12.5h3.8"/><circle cx="15.6" cy="11.2" r=".9" fill="currentColor"/><circle cx="17.8" cy="13.8" r=".9" fill="currentColor"/></symbol>
-      <!-- principles -->
+      <!-- how the games feel -->
       <symbol id="i-calm" viewBox="0 0 24 24"><path d="M4 15c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M2.5 19h19"/><path d="M12 3v1.5M5.6 5.6l1 1M18.4 5.6l-1 1"/></symbol>
       <symbol id="i-ear" viewBox="0 0 24 24"><path d="M11 4.5l-5 4H3v7h3l5 4z"/><path d="M15.5 9a4.4 4.4 0 0 1 0 6M18.4 6.3a8.2 8.2 0 0 1 0 11.4"/></symbol>
       <symbol id="i-retry" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20 4v4.5h-4.5"/><path d="m9 12.2 2.2 2.2L15.4 10"/></symbol>
-      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.2 2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.6l-5.2 2.7 1-5.8-4.3-4.1 5.9-.8z"/></symbol>
-      <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2.2"/><circle cx="9" cy="17" r="2.2"/></symbol>
       <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13.5 15-14-0.5 10-6 15-14 15"/><path d="M5 19c3-4 6-7 10-9.5"/></symbol>
-      <!-- privacy -->
-      <symbol id="i-noaccount" viewBox="0 0 24 24"><circle cx="10" cy="8" r="3.8"/><path d="M3.5 20c.6-3.6 3.2-5.8 6.5-5.8 1.5 0 2.8.4 3.9 1.2"/><path d="m16 15.5 5 5M21 15.5l-5 5"/></symbol>
-      <symbol id="i-noads" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.8"/><path d="m5.8 5.8 12.4 12.4"/></symbol>
-      <symbol id="i-notrack" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5c1.6 0 3 .4 4.3 1M21.5 12s-3.5 6.5-9.5 6.5c-1.6 0-3-.4-4.3-1"/><path d="M9.6 14.4A3.3 3.3 0 0 1 14.4 9.6"/><path d="m3.5 3.5 17 17"/></symbol>
-      <symbol id="i-device" viewBox="0 0 24 24"><rect x="5.5" y="2.8" width="13" height="18.4" rx="2.6"/><path d="M10.5 17.8h3"/><path d="M12 7.2v4.2M10 9.6l2 2 2-2"/></symbol>
       <symbol id="i-beta" viewBox="0 0 24 24"><path d="M9 3h6M10 3v5.2L4.6 18a2 2 0 0 0 1.8 3h11.2a2 2 0 0 0 1.8-3L14 8.2V3"/><path d="M7.5 14.5h9"/></symbol>
     </defs>
   </svg>
@@ -557,9 +402,8 @@
       <a class="brand" href="#top"><svg aria-hidden="true"><use href="#emblem"/></svg>Monkotorix</a>
       <ul class="nav-links">
         <li><a href="#story">Our story</a></li>
-        <li><a href="#play">Ways to play</a></li>
+        <li><a href="#goal">Our goal</a></li>
         <li><a href="#games">Games</a></li>
-        <li><a href="#vision">Vision</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Dark theme" aria-pressed="false">
@@ -569,12 +413,12 @@
     </nav>
 
     <div class="hero-inner">
-      <a class="beta-pill" href="#games"><span class="dot" aria-hidden="true"></span><b>Beta</b> Two free games to play now</a>
+      <a class="beta-pill" href="#games"><span class="dot" aria-hidden="true"></span><b>Beta</b> Two games to play now</a>
       <h1 class="wordmark">Monkotorix</h1>
       <p class="hero-tagline">Different Minds. Endless&nbsp;Possibilities.</p>
-      <p class="hero-sub">Movement, puzzles, numbers and words — for every kind of player.</p>
+      <p class="hero-sub">Movement, puzzles, letters and numbers — small games to play together.</p>
       <div class="hero-actions">
-        <a class="btn primary" href="#games">Play the beta games<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn primary" href="#games">Play the games<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <a class="btn ghost" href="#story">Our story</a>
       </div>
     </div>
@@ -627,51 +471,16 @@
     <section class="story" id="story" aria-labelledby="story-h">
       <div class="wrap">
         <p class="rule">Our Story</p>
-        <h2 id="story-h" class="story-lead">Monkotorix was born from the effort of technical parents to support their neurodivergent kids as best they can — with the tools they know and master: technology.</h2>
-        <p class="story-sub">We made these games for our own children first, and play-tested them at the kitchen table. Now we’re sharing them, free, in the hope that other families enjoy them as much as ours&nbsp;do.</p>
+        <h2 id="story-h" class="story-lead">Monkotorix began with parents doing their best for their neurodivergent children, using what they know inside out: building software.</h2>
+        <p class="story-sub">We made these games for our own children first and tried them out at home. Now we’re sharing them with any family who’d like to&nbsp;play.</p>
         <div class="flourish" aria-hidden="true">✦ ✦ ✦</div>
       </div>
     </section>
 
-    <section class="section alt" id="about" aria-labelledby="about-h">
+    <section class="section alt" id="goal" aria-labelledby="goal-h">
       <div class="wrap">
-        <div class="about-grid">
-          <div class="about-copy">
-            <p class="rule left">The Platform</p>
-            <h2 id="about-h" class="title title-left">A playful space for every kind of&nbsp;mind</h2>
-            <p class="big">Monkotorix is a collection of games and playful activities for children: movement challenges, puzzles, numbers, letters and words, memory games and more — on the screen and off it.</p>
-            <p>We design every game with different children and different ways of playing in mind. Activities come in different levels and can be played at each child’s own pace, on their own or side by side with a grown-up.</p>
-            <ul class="chips" aria-label="What you’ll find">
-              <li class="chip">Movement</li>
-              <li class="chip">Puzzles &amp; logic</li>
-              <li class="chip">Numbers</li>
-              <li class="chip">Letters &amp; words</li>
-              <li class="chip">Memory</li>
-              <li class="chip">Patterns</li>
-              <li class="chip">Calm breaks</li>
-            </ul>
-          </div>
-          <figure class="about-card">
-            <svg class="loop" viewBox="0 0 240 120" aria-hidden="true">
-              <path class="loop-a" d="M120 60 C100 28 40 22 40 60 C40 98 100 92 120 60" fill="none" stroke-width="12" stroke-linecap="round"/>
-              <path class="loop-b" d="M120 60 C140 28 200 22 200 60 C200 98 140 92 120 60" fill="none" stroke-width="12" stroke-linecap="round"/>
-              <circle class="loop-dot a1" cx="54" cy="44" r="7" style="stroke:var(--a1);fill:var(--a1)"/>
-              <circle class="loop-dot" cx="72" cy="86" r="7" style="stroke:var(--a3);fill:var(--a3)"/>
-              <circle class="loop-dot" cx="168" cy="34" r="7" style="stroke:var(--a4);fill:var(--a4)"/>
-              <circle class="loop-dot" cx="196" cy="74" r="7" style="stroke:var(--a5);fill:var(--a5)"/>
-              <circle class="loop-dot" cx="146" cy="86" r="7" style="stroke:var(--a6);fill:var(--a6)"/>
-              <circle class="loop-dot" cx="96" cy="38" r="7" style="stroke:var(--a2);fill:var(--a2)"/>
-            </svg>
-            <blockquote>“There’s no single way to play — every child finds their&nbsp;own.”</blockquote>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="mission" aria-labelledby="mission-h">
-      <div class="wrap">
-        <p class="rule">Our Mission</p>
-        <h2 id="mission-h" class="mission-statement">To make games every child can <em>enjoy, explore and play their own&nbsp;way</em>.</h2>
+        <p class="rule">Our Goal</p>
+        <h2 id="goal-h" class="goal-statement">To help our children practise the things they find hard — <em>in games they actually want to&nbsp;play</em>.</h2>
         <div class="bridge">
           <div class="venn" role="img" aria-label="Monkotorix sits where games on the screen, moving the body and playing together overlap.">
             <div class="c c1" aria-hidden="true">Games on<br>the screen</div>
@@ -680,85 +489,17 @@
             <div class="core" aria-hidden="true">Monkotorix</div>
           </div>
           <div class="bridge-copy">
-            <p class="big">Some Monkotorix activities happen on the screen. Others happen away from it — clapping, jumping, balancing, sorting socks — and many are best played side by side with a grown-up.</p>
-            <p>We care about how every game feels: calm screens, clear steps, kind feedback and no rush. Then we play-test with the toughest critics we know — our own kids.</p>
-            <ul class="disciplines" aria-label="Kinds of play">
-              <li class="discipline"><svg class="icon" aria-hidden="true"><use href="#i-hand"/></svg>Hands &amp; movement</li>
-              <li class="discipline"><svg class="icon" aria-hidden="true"><use href="#i-bulb"/></svg>Puzzles &amp; logic</li>
-              <li class="discipline"><svg class="icon" aria-hidden="true"><use href="#i-learn"/></svg>Letters, words &amp; numbers</li>
-              <li class="discipline"><svg class="icon" aria-hidden="true"><use href="#i-game"/></svg>Playing together</li>
+            <p class="big">Each game is built around something our children found tricky, such as listening to the whole instruction before moving, waiting for the green light, switching when the rule changes, balancing on one leg, remembering a pattern or hearing the sounds inside a word.</p>
+            <p>As parents, not therapists or teachers, we believe skills like these grow with practice, and that children keep at it when they’re enjoying themselves. So fun is the way in, not the goal. We mix the play as we think suits them best: a little on the screen, plenty of moving about and a grown-up alongside.</p>
+            <p>We try to keep every game calm, clear and forgiving:</p>
+            <ul class="cares" aria-label="How the games feel">
+              <li class="care"><svg class="icon" aria-hidden="true"><use href="#i-calm"/></svg>Short rounds, no lives to lose</li>
+              <li class="care"><svg class="icon" aria-hidden="true"><use href="#i-ear"/></svg>Instructions read aloud</li>
+              <li class="care"><svg class="icon" aria-hidden="true"><use href="#i-retry"/></svg>A wrong try just means another go</li>
+              <li class="care"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>Calm screens, sound you can switch off</li>
             </ul>
           </div>
         </div>
-        <div class="goal">
-          <p><strong>Our goal is simple:</strong> games children genuinely love to play, and that grown-ups feel good&nbsp;about.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="play" aria-labelledby="play-h">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="rule">Ways to Play</p>
-          <h2 id="play-h" class="title">Six kinds of play to explore</h2>
-          <p class="lead">Every Monkotorix game is built around one or more of them. Here’s what children get up to.</p>
-        </div>
-        <ol class="areas">
-          <li class="area a1">
-            <div class="area-top">
-              <span class="area-icon"><svg class="icon" aria-hidden="true"><use href="#i-motor"/></svg></span>
-              <span class="area-num">01</span>
-            </div>
-            <h3>Hands, Eyes &amp; Movement</h3>
-            <p>Trace a winding trail, sort shapes into the right holes, pop floating bubbles and catch falling stars.</p>
-            <div class="area-games"><span class="lbl">In the beta</span><a class="tag" href="#game-neurocrew">NeuroCrew<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-          </li>
-          <li class="area a2">
-            <div class="area-top">
-              <span class="area-icon"><svg class="icon" aria-hidden="true"><use href="#i-focus"/></svg></span>
-              <span class="area-num">02</span>
-            </div>
-            <h3>Watch, Wait &amp; Switch</h3>
-            <p>Watch carefully, wait for the signal and follow the rule — then switch to a new one when the game says so.</p>
-            <div class="area-games"><span class="lbl">In the beta</span><a class="tag" href="#game-neurocrew">NeuroCrew<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-          </li>
-          <li class="area a3">
-            <div class="area-top">
-              <span class="area-icon"><svg class="icon" aria-hidden="true"><use href="#i-sensory"/></svg></span>
-              <span class="area-num">03</span>
-            </div>
-            <h3>Calm &amp; Body Breaks</h3>
-            <p>Breathe along with a balloon, stop for a rest on the path, or clap, stamp and jump through a movement break.</p>
-            <div class="area-games"><span class="lbl">In the beta</span><a class="tag" href="#game-neurocrew">NeuroCrew<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="tag" href="#game-olli"><span lang="nl">Lezen met Olli</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-          </li>
-          <li class="area a4">
-            <div class="area-top">
-              <span class="area-icon"><svg class="icon" aria-hidden="true"><use href="#i-think"/></svg></span>
-              <span class="area-num">04</span>
-            </div>
-            <h3>Puzzles, Patterns &amp; Memory</h3>
-            <p>Find what comes next, spot the odd one out, remember a sequence and solve a little shape sudoku.</p>
-            <div class="area-games"><span class="lbl">In the beta</span><a class="tag" href="#game-neurocrew">NeuroCrew<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-          </li>
-          <li class="area a5">
-            <div class="area-top">
-              <span class="area-icon"><svg class="icon" aria-hidden="true"><use href="#i-learn"/></svg></span>
-              <span class="area-num">05</span>
-            </div>
-            <h3>Letters, Words &amp; Numbers</h3>
-            <p>Find the letter, pop the balloon with the sound you hear, spot the rhyme and build a word — or count the dots and see which pile has more.</p>
-            <div class="area-games"><span class="lbl">In the beta</span><a class="tag" href="#game-olli"><span lang="nl">Lezen met Olli</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="tag" href="#game-neurocrew">NeuroCrew<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-          </li>
-          <li class="area a6">
-            <div class="area-top">
-              <span class="area-icon"><svg class="icon" aria-hidden="true"><use href="#i-everyday"/></svg></span>
-              <span class="area-num">06</span>
-            </div>
-            <h3>Play in Everyday Life</h3>
-            <p>Little ideas to take a game off the screen: sort socks by colour, tidy toys into the right boxes, count the stairs together.</p>
-            <div class="area-games"><span class="lbl">In the beta</span><a class="tag" href="#game-neurocrew">NeuroCrew<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-          </li>
-        </ol>
       </div>
     </section>
 
@@ -766,8 +507,8 @@
       <div class="wrap">
         <div class="section-head">
           <p class="rule">The Games</p>
-          <h2 id="games-h" class="title">Two games, now in open&nbsp;beta</h2>
-          <p class="lead">Free to play in the browser on tablets, phones and computers. No sign-up, no ads, no tracking — just open a game and play together.</p>
+          <h2 id="games-h" class="title">Two games so&nbsp;far</h2>
+          <p class="lead">You can play both in the browser on a phone, tablet or computer. There’s nothing to install, no sign-up, no ads and no tracking — just open a game and play together.</p>
         </div>
         <article class="game-panel" id="game-neurocrew" aria-labelledby="neurocrew-h">
           <div>
@@ -778,20 +519,15 @@
               <li>21 games in six groups — from tracing and catching to patterns and little sudokus</li>
               <li>Separate levels for ages 4–5 and 6–8</li>
               <li>Calm mode, a slower speed and read-aloud instructions</li>
-              <li>A “Try it for real” idea to play away from the screen after every level</li>
+              <li>A “Try it for real” idea for each game in the grown-up corner, to play together away from the screen</li>
               <li>In English and Dutch</li>
             </ul>
             <div class="game-actions">
               <a class="btn primary" href="/games/neurocrew/"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Play NeuroCrew</a>
             </div>
-            <div class="game-meta">
-              <span class="tag">Ages 4–8</span>
-              <span class="tag"><span>English · <span lang="nl">Nederlands</span></span></span>
-              <span class="tag">Phone, tablet &amp; computer</span>
-            </div>
           </div>
           <div class="game-shot">
-            <img src="/assets/neurocrew.webp" width="640" height="1385" loading="lazy" decoding="async" alt="NeuroCrew on a phone: Bear, the buddy, stands at the start of a magic path of picture stops — bubbles, a bee on a trail, cups, hands, a leaf for a breathing break and a basket of stars — that leads to a castle.">
+            <img src="/assets/neurocrew.webp" width="640" height="1385" loading="lazy" decoding="async" alt="NeuroCrew on a phone: Bear, the buddy, stands at the start of a magic path of picture stops — a bee on a trail, bubbles, a leaf for a breathing break, hands, cups and a basket of stars — that leads to a castle.">
           </div>
         </article>
 
@@ -802,22 +538,17 @@
           <div>
             <div class="game-head"><h3 id="olli-h" lang="nl">Lezen met Olli</h3><span class="badge-beta">Beta</span></div>
             <p class="sub">Dutch letters &amp; words game · <span class="nowrap">Ages 5–8</span></p>
-            <p class="desc">A cheerful Dutch game full of letters, sounds and words, made to be calm, clear and easy on the eyes. Olli the owl walks children along a magic path through four worlds of short games — find the letter, pop the right balloon, spot the rhyme, build the word — and reads the instructions aloud.</p>
+            <p class="desc">A cheerful Dutch game full of letters, sounds and words. Olli the owl walks children along a magic path through four worlds of short games — find the letter, pop the right balloon, spot the rhyme, build the word — and reads the instructions aloud.</p>
             <ul class="game-points">
               <li>11 letter and word games, plus a movement break</li>
-              <li>Four worlds, three levels and twelve badges to earn</li>
-              <li>No timers or lives — a wrong answer just means try again</li>
+              <li>Four worlds, three levels and 12 badges to earn</li>
+              <li>No timers to race against</li>
               <li>Bold text with wide letter spacing</li>
               <li>Sound groups like <span lang="nl">“aa”</span>, <span lang="nl">“oe”</span> and <span lang="nl">“ui”</span> always stay together</li>
-              <li>Olli speaks with your device’s Dutch voice — most phones, tablets and computers have one. Without one, the game still works, just without Olli’s voice.</li>
+              <li>Olli reads aloud with a Dutch voice, which most phones, tablets and computers have. Without one, Olli may sound a little odd, but the game still works.</li>
             </ul>
             <div class="game-actions">
               <a class="btn primary" href="/games/lezen-met-olli/" hreflang="nl"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg><span>Play <span lang="nl">Lezen met Olli</span></span></a>
-            </div>
-            <div class="game-meta">
-              <span class="tag">Ages 5–8</span>
-              <span class="tag"><span>In Dutch (<span lang="nl">Nederlands</span>)</span></span>
-              <span class="tag">Phone, tablet &amp; computer</span>
             </div>
           </div>
         </article>
@@ -826,133 +557,20 @@
           <svg class="icon" aria-hidden="true"><use href="#i-beta"/></svg>
           <div>
             <h3 id="beta-h">What “beta” means</h3>
-            <p>Both games are ready to play — and still growing. You may spot rough edges, and things will change as we hear from families. Progress is saved only in the browser on your device, so it won’t follow you to another device or browser.</p>
+            <p>Both games are ready to play, but neither is finished yet. You may spot rough edges, and we keep changing things as our children grow and as we hear from other families. Progress is saved only in the browser on your device, so it won’t follow you to another device or browser. The <a href="/privacy/">privacy notice</a> has the details.</p>
           </div>
-          <a class="btn ghost" href="mailto:hello@monkotorix.com?subject=Beta%20feedback">Share feedback</a>
         </aside>
       </div>
     </section>
 
-    <section class="section alt" id="different-minds" aria-labelledby="minds-h">
+    <section class="section alt closing" id="contact" aria-labelledby="closing-h">
       <div class="wrap">
-        <div class="section-head">
-          <p class="rule">Designed for Different Minds</p>
-          <h2 id="minds-h" class="title">Games that fit the&nbsp;child</h2>
-          <p class="lead">Every child has their own mix of interests, energy and ways of playing. That’s why our games come with different levels, settings a grown-up can adjust, and room to play at each child’s own pace.</p>
-        </div>
-        <p class="minds-quote">“Rather than expecting children to fit the game, we want the game to fit the&nbsp;child.”</p>
-        <ul class="principles">
-          <li class="principle">
-            <svg class="icon" aria-hidden="true"><use href="#i-calm"/></svg>
-            <div><h3>Unhurried by design</h3><p>Short rounds and no lives to lose. Breaks are built in, and NeuroCrew slows down when a child needs more time.</p></div>
-          </li>
-          <li class="principle">
-            <svg class="icon" aria-hidden="true"><use href="#i-ear"/></svg>
-            <div><h3>Hear every instruction</h3><p>Instructions can be heard and replayed. Olli reads each one aloud, and in NeuroCrew a tap on “Hear it” does the same — or a grown-up can switch on read-aloud for every level.</p></div>
-          </li>
-          <li class="principle">
-            <svg class="icon" aria-hidden="true"><use href="#i-retry"/></svg>
-            <div><h3>Mistakes are part of play</h3><p>No buzzers and nothing to lose. A wrong try brings a gentle hint and another go.</p></div>
-          </li>
-          <li class="principle">
-            <svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>
-            <div><h3>Small wins, celebrated</h3><p>Stars, stickers and badges to collect along the way, with a sticker at the end of every round.</p></div>
-          </li>
-          <li class="principle">
-            <svg class="icon" aria-hidden="true"><use href="#i-sliders"/></svg>
-            <div><h3>Predictable and clear</h3><p>The same clear steps every round, and a magic path that shows the whole plan before play begins.</p></div>
-          </li>
-          <li class="principle">
-            <svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>
-            <div><h3>Gentle on the senses</h3><p>Motion calms down when a device asks for less, sound and voice can be switched off, and both games come in light and dark.</p></div>
-          </li>
-        </ul>
-        <p class="principles-note">All of this is already part of both beta games.</p>
-      </div>
-    </section>
-
-    <section class="section" id="together" aria-labelledby="together-h">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="rule">Playing Together</p>
-          <h2 id="together-h" class="title">Made for playing side by side</h2>
-          <p class="lead">Monkotorix games are made for children to enjoy with the grown-ups around them — wherever a few minutes of play fit in.</p>
-        </div>
-        <ul class="audiences">
-          <li class="audience">
-            <h3>Parents &amp; caregivers</h3>
-            <p class="where">At home</p>
-            <p>Short games that fit into everyday family life — and small wins to celebrate together.</p>
-          </li>
-          <li class="audience">
-            <h3>Teachers</h3>
-            <p class="where">In the classroom</p>
-            <p>Quick, calm games for a break in the school day or a quiet corner of the room.</p>
-          </li>
-          <li class="audience">
-            <h3>Anyone, anywhere</h3>
-            <p class="where">On the go</p>
-            <p>On a phone, tablet or computer, with nothing to install and no account to create.</p>
-          </li>
-        </ul>
-        <div class="roadmap">
-          <div>
-            <p class="rule left">Where we’re heading</p>
-            <h3>More games, more ways to play</h3>
-            <p>We’re just getting started, and the beta games already take the first steps.</p>
-          </div>
-          <ol>
-            <li><div><b>Games that fit each child</b><span>More levels and settings, so every child can play at their own pace.</span><br><em>Started: a NeuroCrew profile shapes its magic path</em></div></li>
-            <li><div><b>Step-by-step challenges</b><span>Games that get a little harder, one level at a time.</span><br><em>Started: levels in both games</em></div></li>
-            <li><div><b>A view for grown-ups</b><span>An easy overview of which games a child has played and enjoyed.</span><br><em>Coming next</em></div></li>
-          </ol>
-        </div>
-        <div class="values">
-          <p>We believe the best play is full of</p>
-          <ul>
-            <li>curiosity</li>
-            <li>encouragement</li>
-            <li>fun together</li>
-            <li>small wins worth celebrating</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section vision" id="vision" aria-labelledby="vision-h">
-      <div class="wrap">
-        <p class="rule">Our Vision</p>
-        <h2 id="vision-h" class="sr-only">Our vision</h2>
-        <blockquote>A world where every child gets to play in a way that works for&nbsp;them.</blockquote>
-        <p class="lead">We want to make thoughtful, playful games freely available to families everywhere — at home, at school and on the go.</p>
-        <p class="closing">Because every child deserves a place to play.</p>
-      </div>
-    </section>
-
-    <section class="section" id="privacy" aria-labelledby="privacy-h">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="rule">Safe by Design</p>
-          <h2 id="privacy-h" class="title">Made for children. Private by&nbsp;default.</h2>
-        </div>
-        <ul class="safe">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-noaccount"/></svg><b>No accounts</b><span>Nothing to sign up for. Open a game and play.</span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-noads"/></svg><b>No ads or purchases</b><span>No advertising, no in-app purchases, no upsells.</span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-notrack"/></svg><b>No tracking</b><span>No analytics, no cookies, and no third-party scripts or fonts.</span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-device"/></svg><b>Stays on your device</b><span>Progress and settings are kept only in your browser.</span></li>
-        </ul>
-        <p class="privacy-link"><a href="/privacy/">Read the full privacy notice</a></p>
-      </div>
-    </section>
-
-    <section class="section alt harbor" id="contact" aria-labelledby="harbor-h">
-      <div class="wrap">
-        <p class="rule">Our Harbor</p>
-        <h2 id="harbor-h" class="title">A Sofmon project</h2>
-        <p class="lead">Monkotorix sails under the flag of <a href="https://www.sofmon.com" rel="noopener">Sofmon</a> — the parent company and legal home behind everything we make — alongside its sister studio, <a href="https://staycove.studio" rel="noopener">Stay&nbsp;Cove&nbsp;Studio</a>.</p>
+        <p class="rule">Why We Share It</p>
+        <h2 id="closing-h" class="title closing-title"><span>We made what we believe our children needed.</span> <span>We hope it’s useful for yours&nbsp;too.</span></h2>
+        <p class="lead">Every child is different, and what suits ours may not suit yours. So we’ve kept the games simple to try: open one, play for a few minutes and see how it goes.</p>
         <div class="contact-card">
           <h3>Tried a game with your child?</h3>
-          <p>We’d love to hear what worked, what didn’t, and what you’d like to see next. Questions and ideas are welcome too.</p>
+          <p>We’d love to hear what worked, what didn’t and what you’d like to see next. Questions and ideas are welcome too.</p>
           <a class="btn primary" href="mailto:hello@monkotorix.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>hello@monkotorix.com</a>
         </div>
       </div>
@@ -962,8 +580,6 @@
 
   <footer class="site-footer">
     <a class="brand" href="#top"><svg aria-hidden="true"><use href="#emblem"/></svg>Monkotorix</a>
-    <p class="motto">Big Possibilities for Every Little Mind.</p>
-    <p class="ppd">Play · Discover · Enjoy</p>
     <nav class="footer-links" aria-label="Footer">
       <a href="mailto:hello@monkotorix.com">hello@monkotorix.com</a>
       <a href="/games/neurocrew/">NeuroCrew</a>
