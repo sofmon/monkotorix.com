@@ -1,7 +1,7 @@
 {
-  "name": "NeuroCrew – Coordination practice games",
+  "name": "NeuroCrew – Movement & puzzle games",
   "short_name": "NeuroCrew",
-  "description": "Playful coordination practice games for neurodivergent children aged 4 to 8.",
+  "description": "Playful movement and puzzle games for children aged 4 to 8, in English and Dutch.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

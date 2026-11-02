@@ -1,8 +1,16 @@
 # monkotorix.com
 
-The website for **Monkotorix**, a play-based developmental learning platform for
-neurodivergent children and a Sofmon B.V. project. It will be deployed at
-https://monkotorix.com.
+The website for **Monkotorix**, games and playful activities for children, made by parents
+with neurodivergent kids in mind. A Sofmon B.V. project, live at https://monkotorix.com.
+
+## Wording
+
+Monkotorix is a games and playful-activities platform, not a therapy, medical, diagnostic or
+educational service. Copy describes **what the child does in a game** ("trace the trail",
+"remember the sequence"), never what the game supposedly changes in the child ("improves
+coordination", "trains working memory"). Avoid words like therapy, treatment, intervention,
+clinical, develops, improves, boosts or teaches. The single site-level disclaimer lives in the
+footer of `index.html` and `privacy/index.html`; don't repeat it elsewhere.
 
 It follows the same layout as `staycove.studio`: one self-contained page, the games
 served from the same site under `/games/<game>/`, and zero third-party requests.
@@ -21,7 +29,7 @@ served from the same site under `/games/<game>/`, and zero third-party requests.
 | `site/404.html`, `robots.txt`, `sitemap.xml`, `.nojekyll` | Hosting files. |
 | `build-game.sh` | Rebuilds one or both games into `site/games/`. |
 | `tools/locks/` | The exact dependency versions each game was built with (the game repos have no lockfile of their own). |
-| `tools/hero_scene.py` | Draws the hero illustration (a cove at sunrise with a six-stop path, one stop per development area). |
+| `tools/hero_scene.py` | Draws the hero illustration (a cove at sunrise with a six-stop path, one stop per kind of play). |
 | `tools/inject_hero.py` | Writes the hero illustration into `site/index.html` between its `hero-sky` / `hero-land` markers. |
 | `brand/` | Brand assets that are not part of the site: the 512 px emblem and the 1536×1024 card image for the Sofmon portfolio. |
 
@@ -35,7 +43,7 @@ The site sits between its two siblings:
   headings, game panels with a phone-framed screenshot, and the "Our Harbor" section.
 
 All colours are CSS custom properties at the top of the `<style>` block in `index.html`; the six
-development areas each have a colour (`--a1` … `--a6`) that is reused in the hero path, the area
+kinds of play each have a colour (`--a1` … `--a6`) that is reused in the hero path, the "Ways to play"
 cards and the about illustration. Headings use Fraunces (soft) and body text uses Inter.
 
 Calm by default: no autoplaying media, no looping animation (the hero path fades in once and stays
@@ -94,9 +102,9 @@ Studio and FarCast:
   <div class="gallery-card-image" style="background: url('monkotorix.jpg') center / cover, linear-gradient(135deg, var(--sf-cove-ink-700), var(--sf-cove-sea-500));"></div>
   <div class="gallery-card-body">
     <h3>Monkotorix</h3>
-    <p>A play-based developmental learning platform, created with neurodivergent children in mind.</p>
+    <p>Games and playful activities for children, made by parents with neurodivergent kids in mind.</p>
     <div class="tag-list">
-      <span class="tag">Learning games</span>
+      <span class="tag">Kids’ games</span>
       <span class="tag">Neurodiversity</span>
       <a href="https://monkotorix.com" class="tag tag-link" target="_blank" rel="noopener noreferrer"
         aria-label="monkotorix.com (opens in a new tab)">monkotorix.com<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M8 7h9v9" /></svg></a>
