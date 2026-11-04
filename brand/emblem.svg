@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- The site emblem (site/assets/favicon.svg) for large sizes: the gold ring sits fully on the disc,
+       so it reads as one line instead of half over the background. -->
+  <circle cx="32" cy="32" r="30" fill="#14213a"/>
+  <circle cx="32" cy="32" r="29.25" fill="none" stroke="#f2b85e" stroke-opacity=".55" stroke-width="1.5"/>
+  <path d="M32 36 C27.5 29.5 17 28.5 17 36 C17 43.5 27.5 42.5 32 36" fill="none" stroke="#3fa39f" stroke-width="5" stroke-linecap="round"/>
+  <path d="M32 36 C36.5 29.5 47 28.5 47 36 C47 43.5 36.5 42.5 32 36" fill="none" stroke="#ef9a4c" stroke-width="5" stroke-linecap="round"/>
+  <path d="M32 11.5 L33.9 17.1 L39.5 19 L33.9 20.9 L32 26.5 L30.1 20.9 L24.5 19 L30.1 17.1 Z" fill="#f2b85e"/>
+</svg>

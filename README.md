@@ -44,7 +44,7 @@ served from the same site under `/games/<game>/`, and zero third-party requests.
 | `tools/locks/` | The exact dependency versions each game was built with (the game repos have no lockfile of their own). |
 | `tools/hero_scene.py` | Draws the hero illustration (a cove at sunrise with a winding path of six coloured stops). |
 | `tools/inject_hero.py` | Writes the hero illustration into `site/index.html` between its `hero-sky` / `hero-land` markers. |
-| `brand/` | Brand assets that are not part of the site: the 512 px emblem and the 1536×1024 card image for the Sofmon portfolio. |
+| `brand/` | Brand assets that are not part of the site: the emblem as SVG (`emblem.svg`, for large sizes) and PNG (512, 1024 and 2048 px; the 1024 px one is the GitHub organisation logo), and the 1536×1024 card image for the Sofmon portfolio. |
 
 ## Design
 
