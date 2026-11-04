@@ -131,12 +131,14 @@ With three cards, Sofmon's two-column `.gallery-grid` leaves the third on its ow
 
 ## Deploying
 
-Like Stay Cove Studio, the site deploys to **GitHub Pages**: every push to `main` runs
+The repository is [monkotorix/monkotorix.com](https://github.com/monkotorix/monkotorix.com)
+(it moved there from `sofmon/monkotorix.com`). Like Stay Cove Studio, the site deploys to
+**GitHub Pages**: every push to `main` runs
 [.github/workflows/pages.yml](.github/workflows/pages.yml), which publishes the `site/` folder.
 The custom domain `monkotorix.com` is set in the repo's **Settings → Pages** (HTTPS enforced);
 DNS at the registrar points the apex at GitHub Pages' A addresses
 (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) and `www` at
-`sofmon.github.io` with a CNAME, so `www.monkotorix.com` redirects to `monkotorix.com`.
+`monkotorix.github.io` with a CNAME, so `www.monkotorix.com` redirects to `monkotorix.com`.
 
 The site expects to be served from the **domain root** (paths are `/assets/...`, `/games/...`).
 
