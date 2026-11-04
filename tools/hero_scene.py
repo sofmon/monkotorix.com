@@ -143,7 +143,7 @@ trees = "".join([
     tree(1380, 808, 2.2, "h-tree h-tree-near"),
 ])
 
-# lighthouse on the right headland (a nod to the Stay Cove harbour and NeuroCrew's Sunny beach)
+# lighthouse on the right headland (a nod to the Stay Cove harbour and Monko Focus's Sunny beach)
 lx, ly = 1205, 592
 lighthouse = (
     f'<g class="h-lighthouse">'
